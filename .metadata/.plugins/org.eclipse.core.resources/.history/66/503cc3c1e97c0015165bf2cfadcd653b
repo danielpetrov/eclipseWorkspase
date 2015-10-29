@@ -1,0 +1,8 @@
+<?php
+require_once 'Readline.php';
+
+$a = readline ( "Enter a:" );
+
+$b = readline ( "Enter b:" );
+
+$c = readline ( "Enter c:" );

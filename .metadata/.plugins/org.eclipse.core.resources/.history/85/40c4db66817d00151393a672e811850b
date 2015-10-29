@@ -1,0 +1,38 @@
+<?php
+/* Въведете 3 променливи от конзолата – час, сума пари, дали съм здрав
+– число със стойност да или не.
+Съставете програма, която взема решения на базата на тези данни по
+следния начин:
+- ако съм болен няма да излизам
+- ако имам пари ще си купя лекарства
+- ако нямам – ще стоя вкъщи и ще пия чай
+- ако съм здрав ще изляза на кино с приятели
+- ако имам по-малко от 10 лв ще отида на кафе */
+require_once 'Readline.php';
+require_once 'Exceptions.php';
+
+Print "Please enter whole numbers for a and b" . PHP_EOL;
+
+$hour = readline ( "Enter hours:" . PHP_EOL );
+
+$minutes = readline ( "Enter minutes:" . PHP_EOL );
+
+try {
+	checkIfNumber ( $hour, "\$hour" );
+	checkIfNumber ( $minutes, "\$minutes" );
+
+	checkIfWholeNumber ( $hour, "\$hour" );
+	checkIfWholeNumber ( $minutes, "\$minutes" );
+	
+	checkIfValidHourAndMinutes($hour, $minutes);
+	
+	$date = new DateTime('2001-01-01');
+	$date -> setTime($hour, $minutes, 22) . PHP_EOL;
+	
+	echo $date->format('Y-m-d H:i') . "\n";
+
+}
+
+catch ( Exception $e ) {
+	echo "Message: " . $e->getMessage ();
+}

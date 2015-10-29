@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+org.eclipse.php.debug.core.xdebugDebuggerSettingsProvider=<settings><proxyEnable>false</proxyEnable><clientPort>9000</clientPort><ownerId>php-server-951b0ac2-43ce-4d23-b4b1-ed0ee117f494</ownerId><proxyIdeKey></proxyIdeKey><proxyAddress></proxyAddress></settings>\u0005<settings><proxyEnable>false</proxyEnable><clientPort>9000</clientPort><ownerId>php-exe-6815a429-d9f0-45c2-add3-3e9a77ba122b</ownerId><proxyIdeKey></proxyIdeKey><proxyAddress></proxyAddress></settings>
+org.eclipse.php.debug.core.zendDebuggerSettingsProvider=<settings><clientIp>192.168.0.103,127.0.0.1</clientIp><clientPort>10137</clientPort><ownerId>php-server-951b0ac2-43ce-4d23-b4b1-ed0ee117f494</ownerId><responseTimeout>60000</responseTimeout></settings>\u0005<settings><clientPort>10137</clientPort><ownerId>php-exe-6815a429-d9f0-45c2-add3-3e9a77ba122b</ownerId></settings>
+org.eclipse.php.debug.coredefaultPHP=workspaceExe
+org.eclipse.php.debug.coreinstalledPHPDebuggers=org.eclipse.php.debug.core.noneDebugger
+org.eclipse.php.debug.coreinstalledPHPInis=null
+org.eclipse.php.debug.coreinstalledPHPLoadIniDefaults=false
+org.eclipse.php.debug.coreinstalledPHPLocations=C\:\\xampp\\php\\php.exe
+org.eclipse.php.debug.coreinstalledPHPNames=workspaceExe
+org.eclipse.php.debug.coreinstalledPHPUniqueIds=php-exe-6815a429-d9f0-45c2-add3-3e9a77ba122b
+org.eclipse.php.debug.corephp_versions=php5.6

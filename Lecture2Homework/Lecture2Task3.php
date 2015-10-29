@@ -1,0 +1,25 @@
+<?php
+/*
+ * Създайте 2 променливи с различни стойности в даден PHP скрипт.
+ * Измислете начин програмно да размените стойностите им.
+ * Разпечатайте новите стойности.
+ */
+$a = 3;
+
+$b = "Hi!";
+
+$theExchanger = NULL;
+
+Print ("Before exchange: " . PHP_EOL) ;
+printf ( "a : %s " . PHP_EOL, $a );
+printf ( "b : %s" . PHP_EOL, $b );
+
+$theExchanger = $a;
+$a = $b;
+$b = $theExchanger;
+
+$theExchanger = NULL;
+
+Print ("After exchange: " . PHP_EOL) ;
+printf ( "a : %s " . PHP_EOL, $a );
+printf ( "b : %s" . PHP_EOL, $b );

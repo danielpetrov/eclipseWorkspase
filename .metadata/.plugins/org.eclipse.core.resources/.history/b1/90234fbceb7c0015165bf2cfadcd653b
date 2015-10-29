@@ -1,0 +1,11 @@
+<?php
+
+require_once 'Readline.php';
+
+$a = readline ( "Enter a:" . PHP_EOL);
+
+$b = readline ( "Enter b:" . PHP_EOL);
+
+if (!( is_int ( $a ) && is_int ( $b ) )) {
+	throw new Exception ( "Please enter numberic value for a, b and c!" . PHP_EOL);
+}

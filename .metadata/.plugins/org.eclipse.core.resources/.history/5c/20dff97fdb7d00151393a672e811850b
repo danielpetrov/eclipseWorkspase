@@ -1,0 +1,56 @@
+<?php
+/*
+ * Да се състави програма, която по въведени координати на 2 позиции
+ * от шахматната дъска извежда отговор дали са оцветени в еднакъв или
+ * различен цвят.
+ * Шахматната дъска е квадратна.
+ * Въвеждат се две двойки числа от интервала [1..8].
+ * Пример: 2 2 3 2
+ * Изход: Позициите са с различен цвят
+ */
+require_once 'Readline.php';
+require_once 'Exceptions.php';
+
+$chessBoardColumn1 = readline ( "Please enter chessBoardColumn1 in Range [1..8]: " . PHP_EOL );
+$chessBoardRow1 = readline ( "Please enter chessBoardrow1 in Range [1..8]: " . PHP_EOL );
+
+$chessBoardColumn2 = readline ( "Please enter chessBoardColumn2 in Range [1..8]: " . PHP_EOL );
+$chessBoardRow2 = readline ( "Please enter chessBoardrow2 in Range [1..8]: " . PHP_EOL );
+
+try {
+	checkIfNumber ( $chessBoardColumn1, "\$chessBoardColumn1" );
+	checkIfNumber ( $chessBoardColumn2, "\$chessBoardColumn2" );
+	checkIfNumber ( $chessBoardRow1, "\$chessBoardRow1" );
+	checkIfNumber ( $chessBoardRow2, "\$chessBoardRow2" );
+	
+	checkIfWholeNumber ( $chessBoardColumn1, "\$chessBoardColumn1" );
+	checkIfWholeNumber ( $chessBoardColumn2, "\$chessBoardColumn2" );
+	checkIfWholeNumber ( $chessBoardRow1, "\$chessBoardRow1" );
+	checkIfWholeNumber ( $chessBoardRow2, "\$chessBoardRow2" );
+	
+	checkIfNumberIsInRange ( 1, 8, $chessBoardColumn1, "\$chessBoardColumn1" );
+	checkIfNumberIsInRange ( 1, 8, $chessBoardColumn2, "\$chessBoardColumn2" );
+	checkIfNumberIsInRange ( 1, 8, $chessBoardRow1, "\$chessBoardRow1" );
+	checkIfNumberIsInRange ( 1, 8, $chessBoardRow2, "\$chessBoardRow2" );
+	
+	$SquareOneisWhite = false;
+	$SquareTwoisWhite = false;
+	// Solution : Everywhere in board if both row and col numbers are even or both are
+	// odd the color is Black. If everywhere on board if both row and col are even/odd(one is odd
+	// and one is even) the color is White.
+	
+	if ((! (($chessBoardColumn1 % 2) && ($chessBoardRow1 % 2))) ) {
+		$SquareOneisWhite = true;
+	}
+	if ((!($chessBoardColumn2 % 2)) && (!($chessBoardRow2 % 2))) {
+		$SquareOTwoIsWhite = true;
+	}
+	if ($SquareOneisWhite) {
+		echo "hi " . PHP_EOL;
+	}
+	if ($SquareTwoisWhite) {
+		echo "hi two";
+	}
+} catch ( Exception $e ) {
+	echo "Message: " . $e->getMessage ();
+}

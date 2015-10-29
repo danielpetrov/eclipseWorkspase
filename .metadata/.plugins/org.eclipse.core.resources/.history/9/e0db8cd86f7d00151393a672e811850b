@@ -1,0 +1,15 @@
+<?php
+function checkIfNumber($value, $var_name) {
+	if (! is_numeric ( $value )) {
+		throw new Exception ( $var_name . "shoud have numeric value!" . PHP_EOL );
+	}
+	
+	return true;
+}
+function checkIfWholeNumber($value, $var_name) {
+	if (! (floor ( $value ) == $value)) {
+		throw new Exception ( $var_name . "shoud be a whole number!" . PHP_EOL );
+	}
+	
+	return true;
+}

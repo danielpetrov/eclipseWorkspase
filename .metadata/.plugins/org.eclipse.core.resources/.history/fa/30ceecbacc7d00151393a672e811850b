@@ -1,0 +1,21 @@
+<?php
+/* Съставете програма, която по дадено трицифренo число проверява
+дали числото се дели на всяка своя цифра. Във въведеното число да
+няма цифра 0. */
+require_once 'Readline.php';
+require_once 'Exceptions.php';
+
+$number = readline ( "Please enter number in Range [111..999] without zeros: " . PHP_EOL );
+
+try {
+	checkIfNumber ( $number, "\$number" );
+
+	checkIfWholeNumber ( $number, "\$number" );
+
+	checkIfNumberIsInRange ( 100, 999, $number );
+
+	checkIfStringDoesntContainValue($number, '0', "The number");
+
+} catch ( Exception $e ) {
+	echo "Message: " . $e->getMessage ();
+}

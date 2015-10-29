@@ -1,0 +1,87 @@
+!SESSION 2015-10-27 21:46:37.450 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.php.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.php.product
+
+!ENTRY org.eclipse.php.ui 4 10001 2015-10-27 21:59:41.422
+!MESSAGE preference option missing: org.eclipse.php.formatter.core/formatterProfile (org.eclipse.php.formatter.ui.preferences.CodeFormatterConfigurationBlock)
+
+!ENTRY org.eclipse.ui 4 4 2015-10-27 22:10:56.826
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.backwardHistory: {ActionHandler(org.eclipse.ui.internal.NavigationHistoryAction@5b7d7e)} vs {ActionHandler(org.eclipse.ui.internal.dialogs.PreferencePageHistory$1@97dc16)}
+!SESSION 2015-10-27 22:12:44.762 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.php.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.php.product
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-27 22:28:18.535
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-27 22:28:22.113
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+!SESSION 2015-10-28 13:55:11.288 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_65
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.php.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.php.product
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 14:43:16.963
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 16:01:10.308
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 16:01:39.876
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 16:01:54.347
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 16:02:12.539
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 16:02:22.883
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 16:02:33.852
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 16:03:09.004
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 23:32:19.139
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-28 23:39:24.653
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 00:00:26.814
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 00:49:41.906
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 01:45:08.306
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 01:58:11.333
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 02:09:34.760
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 02:41:37.148
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 14:50:52.419
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove
+
+!ENTRY org.eclipse.wst.sse.ui 4 4 2015-10-29 15:01:51.110
+!MESSAGE BlockCommentingStrategy#remove could not find the commenting region to remove

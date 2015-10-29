@@ -1,0 +1,32 @@
+<?php
+
+require_once 'Readline.php';
+require_once 'Exceptions.php';
+
+$a = readline ( "Enter a:" . PHP_EOL);
+
+$b = readline ( "Enter b:" . PHP_EOL);
+
+$c = readline ( "Enter c:" . PHP_EOL);
+
+if (!( is_numeric ( $a ) && is_numeric ( $b ) && is_numeric ( $c ))) {
+	throw new Exception ( "Please enter numberic value for a, b and c!" . PHP_EOL);
+}
+
+try {
+	checkIfNumber( $a );
+	checkIfNumber( $b );
+	checkIfNumber( $c );
+	echo 'If you see this, the number is 1 or below';
+}
+
+// catch exception
+catch ( Exception $e ) {
+	echo 'Message: ' . $e->getMessage ();
+}
+
+if (($a < $c) && ($c < $b)) {
+	echo "The number " . $c . " is between the numbers " . $a . " and " . $b . PHP_EOL;
+} else {
+	echo "The number " . $c . " is not between the numbers " . $a . " and " . $b . PHP_EOL;
+}

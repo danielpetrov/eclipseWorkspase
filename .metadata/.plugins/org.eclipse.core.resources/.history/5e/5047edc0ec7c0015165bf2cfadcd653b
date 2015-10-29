@@ -1,0 +1,14 @@
+<?php
+
+require_once 'Readline.php';
+
+$a = (float)readline ( "Enter a:" . PHP_EOL);
+
+$b = (float)readline ( "Enter b:" . PHP_EOL);
+
+var_dump($a);
+var_dump($b);
+
+if (!( is_int ( $a ) && is_int ( $b ) )) {
+	throw new Exception ( "Please enter integer value for a, b!" . PHP_EOL);
+}
