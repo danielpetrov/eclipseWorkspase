@@ -1,0 +1,23 @@
+<?php
+/*
+ * Задача 25:
+ * Да се направи програма, която по дадено число N,да изчислява
+ * N!,т.е. 1*2*3*4...*N.
+ * Пример: 5
+ * Изход: 120
+ * Използвайте цикъл do-while.
+ */
+require_once 'Readline.php';
+
+$endingNumber = ( int ) readline ( "Enter number:" . PHP_EOL );
+
+$currentNumber = 1;
+
+$allCombinations = 1;
+
+do {
+	echo $currentNumber . "*";
+	$allCombinations *= $currentNumber++;
+} while ( $currentNumber <= $endingNumber );
+
+echo PHP_EOL . $allCombinations;

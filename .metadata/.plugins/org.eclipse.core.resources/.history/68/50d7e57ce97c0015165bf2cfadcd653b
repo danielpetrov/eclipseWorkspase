@@ -1,6 +1,0 @@
-<?php
-// include include_once require require_once
-require_once 'readline.php';
-
-$a = readline('Enter A' . PHP_EOL);
-echo 'A is ', $a, PHP_EOL;

@@ -1,0 +1,13 @@
+<?php
+// Задача 5: Да се въведат от потребителя 2 числа. И да се изведат 
+//на екрана всички числа от по-малкото до по-голямото.
+
+require_once 'Readline.php';
+
+$min = ( int ) readline ( "Enter min:" . PHP_EOL );
+
+$max = ( int ) readline ( "Enter max:" . PHP_EOL );
+
+for ($i = $min; $i <= $max; $i++) {
+	echo $i . " ";
+}

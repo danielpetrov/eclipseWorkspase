@@ -1,0 +1,5 @@
+<?php
+
+$singleChar = "dada";
+
+var_dump(ord(strtolower($singleChar)));

@@ -1,5 +1,0 @@
-<?php
-require_once 'Readline.php';
-
-$a = readline("input a");
-echo 'A is ', $a, PHP_EOL;

@@ -1,0 +1,30 @@
+<?php
+/*
+ * Задача 24:
+ * Едно число X е палиндром,aко се чете еднакво отпред назад иотзад напред.
+ * Да се състави програма, която проверява дали въведено число е палиндром.
+ * Входни данни:
+ * N - естествено число от интервала [10 .. 30000].
+ * Пример: 17571
+ * Изход: числото е палиндром
+ */
+require_once 'Readline.php';
+
+$numberFromConsole = ( int ) readline ( "Enter number in Range[10 .. 30000] :" . PHP_EOL );
+
+$number = $numberFromConsole;
+
+$reversedNumber = 0;
+
+while( floor ( $number ) != 0 ) {
+	$reversedNumber = $reversedNumber * 10 + $number % 10;
+	$number /= 10;
+}
+
+
+if ($numberFromConsole == $reversedNumber) {
+	echo "Числото е палиндром.";
+} else{
+	echo "Числото не е палиндром.";
+}
+

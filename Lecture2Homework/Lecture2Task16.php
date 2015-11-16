@@ -12,31 +12,19 @@
  * Изход: възходящ ред.
  */
 require_once 'Readline.php';
-require_once 'Exceptions.php';
 
-$threeDigitNumber = readline ( "Please enter whole number in Range [100..999]: " . PHP_EOL );
+$threeDigitNumber = ( int ) readline ( "Please enter whole number in Range [100..999]: " . PHP_EOL );
 
-try {
-	checkIfNumber ( $threeDigitNumber, "\$threeDigitNumber" );
-	
-	checkIfWholeNumber ( $threeDigitNumber, "\$threeDigitNumber" );
-	
-	checkIfNumberIsInRange ( 100, 999, $threeDigitNumber, "\$threeDigitNumber" );
-	
-	$a = $threeDigitNumber [0];
-	$b = $threeDigitNumber [1];
-	$c = $threeDigitNumber [2];
-	
-	if ($a == $b && $b == $c) {
-		echo "Цифрите са равни.";
-	} else if ($a < $b && $b < $c) {
-		echo "Цифрите са във възходящ ред.";
-	} else if ($a > $b && $b > $c) {
-		echo "Цифрите са във низходящ ред.";
-	} else {
-		echo "Цифрите са ненаредени.";
-	}
-} catch ( Exception $e ) {
-	echo "Message: " . $e->getMessage ();
-	exit ( 1 );
+$a = $threeDigitNumber [0];
+$b = $threeDigitNumber [1];
+$c = $threeDigitNumber [2];
+
+if ($a == $b && $b == $c) {
+	echo "Цифрите са равни.";
+} else if ($a < $b && $b < $c) {
+	echo "Цифрите са във възходящ ред.";
+} else if ($a > $b && $b > $c) {
+	echo "Цифрите са във низходящ ред.";
+} else {
+	echo "Цифрите са ненаредени.";
 }

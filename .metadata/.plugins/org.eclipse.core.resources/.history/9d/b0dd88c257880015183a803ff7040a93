@@ -1,0 +1,4 @@
+<?php
+$singleChar = "d";
+
+var_dump(ord(strtolower($singleChar))

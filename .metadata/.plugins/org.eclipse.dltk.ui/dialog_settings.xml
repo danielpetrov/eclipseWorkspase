@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\daniel\Desktop\ItTalents\Lecture2\LectureTwoHomework" key="org.eclipse.dltk.ui.last.external.project"/>
+	<item value="C:\Users\daniel\Desktop\eclipseWorkspase\ArraysPractise" key="org.eclipse.dltk.ui.last.external.project"/>
 	<section name="CallHierarchySearchScope">
 	</section>
 	<section name="org.eclipse.php.internal.ui.explorer.PHPExplorerPart">
@@ -10,11 +10,17 @@
 		<item value="1" key="rootMode"/>
 		<item value="false" key="linkWithEditor"/>
 	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
 		<item value="480" key="width"/>
 		<item value="443" key="x"/>
 		<item value="80" key="y"/>
 		<item value="427" key="height"/>
+	</section>
+	<section name="BuildpathContainerSelectionPage">
+		<item value="0" key="index"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.TypeSelectionComponent">
 		<item value="true" key="show_status_line"/>

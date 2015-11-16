@@ -1,0 +1,7 @@
+<?php
+
+$singleChar = "dada";
+
+foreach ($singleChar as $key => $value) {
+	echo $value;
+}

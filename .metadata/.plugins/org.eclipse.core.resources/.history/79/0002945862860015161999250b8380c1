@@ -1,0 +1,11 @@
+<?php
+require_once 'Readline.php';
+
+$n = ( int ) readline ( "Enter n and see weird nonsense magic:" . PHP_EOL );
+
+for ($i = 0; $i < $n; $i++) {
+	for ($j = 0; $j < $n; $j++) {
+		echo $j;
+	}
+	echo PHP_EOL;
+}

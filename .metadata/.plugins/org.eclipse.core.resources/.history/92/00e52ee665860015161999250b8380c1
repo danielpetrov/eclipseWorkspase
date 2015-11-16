@@ -1,0 +1,36 @@
+<?php
+/* Задача 11:
+Въведете число N, чрез уеб форма и изкарайте като
+резултат следния триъгълник с височина
+N
+:
+*
+***
+*****
+.................
+Кaто допълнително упражнение – нарисувайте същия
+триъгълник, но незапълнен. */
+
+require_once 'Readline.php';
+
+$height = ( int ) readline ( "Enter a height for the triangle" );
+
+$baseLenfth = $height * 2 - 1;
+
+$startingDot = $height;
+$endingDot = $height;
+
+for ($i = 0; $i < $height; $i++) {
+	for ($j = 0; $j <= $baseLenfth; $j++) {
+
+		if (($j == $startingDot) || ($j == $endingDot)) {
+			echo "*";
+		} else {
+			echo " ";
+		}
+	}
+	
+	$startingDot--;
+	$endingDot++;
+	echo PHP_EOL;
+}

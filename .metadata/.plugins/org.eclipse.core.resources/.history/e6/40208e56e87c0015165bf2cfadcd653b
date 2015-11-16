@@ -1,4 +1,0 @@
-<?php
-require_once 'Readline.php';
-$a = readline("enter a");
-echo $a;
