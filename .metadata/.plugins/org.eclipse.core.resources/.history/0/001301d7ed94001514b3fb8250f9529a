@@ -1,0 +1,39 @@
+<?php
+require_once 'Readline.php';
+
+//$sum = ( int ) readline ( "Enter sum in Range[ 2>=sum<=27 ]:" . PHP_EOL );
+$sum = 25;
+
+$start = microtime(true);
+
+for ($j = 0; $j < 1000; $j++) {
+
+for($firstDigit = 1; $firstDigit <= 9; $firstDigit ++) {
+	for($secondDigit = 0; $secondDigit <= 9; $secondDigit ++) {
+		for($thirdDigit = 0; $thirdDigit <= 9; $thirdDigit ++) {
+			if ($firstDigit + $secondDigit + $thirdDigit == $sum) {
+				//echo $firstDigit . $secondDigit . $thirdDigit . PHP_EOL;
+			}
+		}
+	}
+}
+}
+
+
+$time_elapsed_secs = microtime(true) - $start;
+
+$start = microtime(true);
+for ($j = 0; $j < 1000; $j++) {
+	
+
+for ($i = 0; $i < 1000; $i++) {
+	if ($sum == (($i % 10) + (int)( ($i / 10) % 10 ) + (int)($i / 100))){
+		//echo  (int)(($i % 10) . ( ($i / 10) % 10 ) . ($i / 100)) . PHP_EOL;
+	};
+}
+}
+
+$time_elapsed_secs = microtime(true) - $start;
+
+echo $time_elapsed_secs . PHP_EOL;
+echo $time_elapsed_secs2 . PHP_EOL;

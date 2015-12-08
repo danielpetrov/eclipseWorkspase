@@ -1,0 +1,18 @@
+<?php
+/* Задача 5:
+Да се реши горната задача като се създаде рекурсивна функция, която
+да връща търсения масив като резултат */
+$arra0;
+insertInPlace($array, 0, $n);
+print_r($array);
+function insertInPlace(&$array, $current, $n){
+	if ($current == count($array)) {
+		array_push($array, $n);
+		return;
+	} else if($n < $array[$current]) {
+		array_splice($array, $current, 0 , $i);
+		return;
+	}
+	
+	insertInPlace($array, $current + 1, $n);
+}

@@ -13,7 +13,7 @@ if ($numberToCheckIfPrime <= 1) {
 	$isPrime = false;
 }
 
-for($i = 2; $i < $sqrtOfTheNumber; $i ++) {
+for($i = 2; $i <= $sqrtOfTheNumber; $i ++) {
 	if (!($numberToCheckIfPrime % $i)) {
 		$isPrime = false;
 		break;

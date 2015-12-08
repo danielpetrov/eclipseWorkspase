@@ -1,0 +1,4 @@
+<?php
+
+
+echo calculateDistance(5348, 4466, 8250, 6199);

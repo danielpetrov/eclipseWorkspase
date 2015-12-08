@@ -1,0 +1,20 @@
+<?php
+/* Задача 2:
+Да се състави програма, която изчислява произведение на две 
+естествени числа =>2, като се използва само събиране.
+Входни данни: 2 естествени числа.
+Пример: 4, 5 
+Изход: 20 */
+//4 * 5 = 4 + 4 + 4 + 4 + 4 
+echo multiplicationByAdding(4, 5);
+
+function multiplicationByAdding($number, $times){
+	
+	$number += $number;
+	echo "s";
+	if ($times == 0) {
+		return $number;
+	}
+	
+	return multiplicationByAdding($number, $times - 1);
+}

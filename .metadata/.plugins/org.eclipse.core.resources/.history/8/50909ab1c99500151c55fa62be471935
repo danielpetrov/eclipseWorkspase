@@ -1,0 +1,37 @@
+<?php
+/* Задача2:
+Ще наричаме площадка непрекъсната последователност от елементи с
+равни стойности.
+Да се състави програма, която проверява коя е най-дългата площадка
+в предварително въведен масив от естествени числа.
+Програмата да извежда началния вид на масива и най-дългата
+площадка в него.
+Пример:
+1 3 3 7 9 9 9 9 11 11 12 14
+Изход:
+Най-дългата площадка е: 4 елемента
+Брой на площадките: 3 */
+$array = array(1, 3, 3, 7, 9, 9, 9, 9, 11, 11, 12, 14,);
+
+$maxValley = 0;
+$currentValley = 1;
+$allValleys = 1;
+//$onlyOneValley = true;
+$inValley = false;
+
+for ($i = 0; $i < count($array); $i++) {
+	if ($arrray[$i] === $array[$i + 1]) {
+		$currentValley++;
+		if ($currentValley > $maxValley) {
+			$maxValley = $currentValley;
+		}
+		
+		$inValley = true;
+	} else {
+		$lengthOfValley = 1;
+		if ($inValley) {
+			$inValley = false;
+			$allValleys++;
+		}
+	}
+}

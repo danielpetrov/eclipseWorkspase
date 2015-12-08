@@ -1,0 +1,8 @@
+<?php
+require_once 'Readline.php';
+
+$a = [1,2,3,4,5];
+$b = [2,1,3];
+$c = array_diff($a, $b);
+
+print_r($c);

@@ -1,0 +1,34 @@
+<?php
+function calculateDistance($x1, $x2, $y1, $y2){
+    return sqrt(pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2));
+}
+
+function canSaveHuman($zombie, $human, $currentHeroX, $currentHeroY){
+	$distanceBetweenZombieAndHuman = calculateDistance(
+			$human['humanX'], 
+			$zombie['zombieX'], 
+			$human['humanY'], 
+			$zombie['zombieY']);
+	
+	$distanceBetweenZombieIAndHeroOuterShootRange = calculateDistance(
+			$currentHeroX, 
+			$zombie['zombieX'], 
+			$currentHeroY, 
+			$zombie['zombieY']) 
+	- HeroAttackRange 
+	+ HeroAttackRangeOffset;
+
+	$roundsForZombieToReachHuman = (int)($distanceBetweenZombieAndHuman/ ZombieMoveUnits);//offset
+	$roundsForHeroToSaveHuman = (int)($distanceBetweenZombieIAndHero/ HeroMoveUnits);
+
+	return $roundsForHeroToSaveHuman <= $roundsForZombieToReachHuman ? TRUE : FALSE;
+}
+
+$distanceBetweenZombieAndHuman = (int)calculateDistance(1518, 881, 280, 1210);
+$distanceBetweenHumanAndHero = (int)calculateDistance(4920, 881, 6810, 1210) - 2000 + 3;
+$roundsForZombieToReachHuman = (int)($distanceBetweenZombieAndHuman/ 400);
+$roundsForHeroToSaveHuman = (int)($distanceBetweenHumanAndHero/ 1000);
+
+echo $roundsForZombieToReachHuman, PHP_EOL;
+echo $roundsForHeroToSaveHuman, PHP_EOL;
+echo $roundsForHeroToSaveHuman < $roundsForZombieToReachHuman ? TRUE : FALSE;

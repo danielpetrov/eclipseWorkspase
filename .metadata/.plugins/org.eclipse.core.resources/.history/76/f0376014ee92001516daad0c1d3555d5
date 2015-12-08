@@ -1,0 +1,30 @@
+<?php
+/* Задача 3:
+Да се състави програма, чрез която се въвеждат последователно две
+редици от символи без интервали.
+Програмата да извежда съобщение за резултата от сравнението им по
+позиции.
+Пример: хипопотам, хипопотук
+Изход:
+Двата низа са с равна дължина.
+Разлика по позиции:
+8 а-у
+9 м-к */
+
+require_once 'Readline.php';
+
+$firstString = readline ( "Enter string: " . PHP_EOL );
+$secondString = readline ( "Enter string: " . PHP_EOL );
+
+echo "Двата низа са с ", 
+	strlen($firstString) == strlen($secondString) ? "еднаква дължина." : "различна дължина.";
+
+for ($i = 0; $i < (strlen($firstString) > strlen($secondString) ? 
+			 strlen($firstString) : strlen($secondString)) ; $i++) {
+	if(strcmp($firstString[$i], $secondString[$i])){
+		echo "$i $firstString[$i] - $secondString[$i]" . PHP_EOL;
+	}
+}
+
+
+

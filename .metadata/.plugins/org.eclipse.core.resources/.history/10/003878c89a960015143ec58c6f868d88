@@ -1,0 +1,6 @@
+<?php
+function calculateDistance($x1, $x2, $y1, $y2){
+    return sqrt(pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2));
+}
+
+echo calculateDistance(5348, 4466, 8250, 6199);

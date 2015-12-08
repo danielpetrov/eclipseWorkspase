@@ -1,0 +1,6 @@
+<?php
+$allHumans[$i][
+		"humanID" => $humanId,
+		"humanX" => $humanX,
+		"humanY" => $humanY
+];

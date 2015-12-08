@@ -1,0 +1,32 @@
+<?php
+/**
+ * Auto-generated code below aims at helping you parse
+* the standard input according to the problem statement.
+**/
+
+/* fscanf(STDIN, "%s",
+		$LON
+		);
+fscanf(STDIN, "%s",
+		$LAT
+		);
+fscanf(STDIN, "%d",
+		$N
+		);
+
+$allDefibrilators = [];
+
+for ($i = 0; $i < $N; $i++)
+{
+	$DEFIB = stream_get_line(STDIN, 256, "\n");
+	$allDefibrilators[] = explode(';', $DEFIB);
+} */
+echo calculateDistance(3.879483, 3.87952263361082, 43.608177, 43.6071285339217);
+
+function calculateDistance($longitudeA, $longitudeB, $latitudeA, $latitudeB){
+	$x = ($longitudeB - $longitudeA) * cos ( ($latitudeA + $latitudeB) / 2);
+	$y = ($latitudeB - $latitudeA);
+	$d = sqrt(pow($x,2) + pow($y,2)) * 6371;
+	return $d;
+}
+//print_r($allDefibrilators);

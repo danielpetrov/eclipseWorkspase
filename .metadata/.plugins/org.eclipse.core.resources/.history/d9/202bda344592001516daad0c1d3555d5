@@ -1,0 +1,4 @@
+<?php
+require_once 'Readline.php';
+
+$numberFromConsole = ( int ) readline ( "Enter number in Range[10 .. 30000] :" . PHP_EOL );

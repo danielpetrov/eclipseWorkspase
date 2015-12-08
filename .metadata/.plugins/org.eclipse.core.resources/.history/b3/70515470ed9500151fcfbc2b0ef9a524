@@ -1,0 +1,47 @@
+<?php
+fscanf(STDIN, "%s",
+		$userLongitude
+		);
+fscanf(STDIN, "%s",
+		$userLatitude
+		);
+fscanf(STDIN, "%d",
+		$n
+		);
+
+$allDefibrilators = [];
+
+for ($i = 0; $i < $n; $i++)
+{
+    $DEFIB = stream_get_line(STDIN, 256, "\n");
+    $allDefibrilators[] = explode(';', $DEFIB);
+}
+
+$shortestDistance = 2414515415;
+
+foreach ($allDefibrilators as $defibrilator) {
+	echo $userLongitude;
+	echo calculateDistance(
+        $userLongitude, 
+        $defibrilator[4], 
+        $userLatitude, 
+        $defibrilator[5]) . PHP_EOL;
+    if(calculateDistance(
+        $userLongitude, 
+        $defibrilator[4], 
+        $userLatitude, 
+        $defibrilator[5]) < $shortestDistance){
+            $closestDefibrilatorName = $defibrilator[1];
+            $shortestDistance = $defibrilator[5];
+        }
+}
+
+function calculateDistance($longitudeA, $longitudeB, $latitudeA, $latitudeB){
+    $x = ($longitudeB - $longitudeA) * cos ( ($latitudeA + $latitudeB) / 2);
+    $y = ($latitudeB - $latitudeA);
+    $d = sqrt(pow($x,2) + pow($y,2)) * 6371;
+    return $d;
+}
+
+echo($closestDefibrilatorName);
+//print_r($allDefibrilators);

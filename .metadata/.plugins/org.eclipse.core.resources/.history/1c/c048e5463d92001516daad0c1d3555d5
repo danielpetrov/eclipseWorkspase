@@ -1,0 +1,33 @@
+<?php
+/* Задача 3:
+Да се състави програма, която проверява дали въведено естествено
+число е просто.
+Пример: 101
+Изход: просто */
+/* $isPrime = true;
+
+if ($numberToCheckIfPrime <= 1) {
+	$isPrime = false;
+}
+
+for($i = 2; $i <= $sqrtOfTheNumber; $i ++) {
+	if (!($numberToCheckIfPrime % $i)) {
+		$isPrime = false;
+		break;
+	}
+} */
+$n = 5;
+var_dump(checkIfPrime($n, $n));
+
+function checkIfPrime($n, $i){
+	if ($n <= 1) {
+		return false;
+	}
+	if ($i < 2) {
+		return true;
+	}
+	if (!($n % $i)) {
+		return false;
+	}
+	return checkIfPrime($n, $i - 1);
+}

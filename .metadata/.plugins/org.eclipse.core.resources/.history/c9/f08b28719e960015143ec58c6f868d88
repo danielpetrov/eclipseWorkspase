@@ -1,0 +1,11 @@
+<?php
+function calculateDistance($x1, $x2, $y1, $y2){
+    return sqrt(pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2));
+}
+
+function calculateZombieStep($now, $next){
+	 return abs($now - $next);
+}
+
+
+echo calculateDistance(8000, 14000, 2000, 6500);

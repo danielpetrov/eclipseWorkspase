@@ -1,0 +1,28 @@
+<?php
+require_once 'Readline.php';
+
+$a = [1,2,3,4,5];
+$b = [2,1,3];
+//$c = array_diff_assoc($a, $b);
+
+
+$a = [1,2,3,4,5];
+$b = [6,7,8,9,10];
+
+//$c = $a + $b;
+$c = array_merge($a, $b);
+$a = [
+		"first" => 1,
+		"second" => 2,
+		"third" => 3
+];
+
+$b = [
+		"first" => 4,
+		"second" => 5,
+		"third" => 6
+];
+
+//$c = $a + $b;
+//$c = array_merge($a, $b);
+print_r($c);

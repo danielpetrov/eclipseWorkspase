@@ -1,0 +1,26 @@
+<?php
+/* Задача 5:
+Да се състави програма, чрез която се въвежда естествено число N.
+Програмата да извежда число, чиито цифри са написани в ред обратен
+на въведеното число.
+Да се извежда съобщение дали въведеното число е палиндром.
+Пример: 12321
+Изход: 12321 да.
+Пример: 12578
+Изход: 87521 не.
+Използвайте рекурсия */
+
+$number = 12321;
+
+echo IsPalindrom($number, 0, $number);
+
+function IsPalindrom($number, $rev, $numberToCheck){
+	$number /= 10;
+	$rev = $rev * 10 + $number % 10;
+	echo $rev . PHP_EOL;
+	if (!floor($number)) {
+		return $numberToCheck == $rev ? "палиндром" : "не е палиндром";
+	}
+	
+	return IsPalindrom($number, $rev, $numberToCheck);
+}

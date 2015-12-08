@@ -1,0 +1,44 @@
+<?php
+$someArray = [15, 1,2,3,5,3,6,11,4, 15,23];
+
+
+echo quickSort($someArray, 0, count($someArray) - 1, 3);
+
+function quickSort(&$array, $low, $high, $k){
+	if ($low < $high) {
+		$needle = count($array) - $k;
+		
+		$p = partition($array, $low, $high);
+		
+		//echo $p . PHP_EOL;
+		if ($p == $needle) {
+			return $array[$p];
+		} else if($p > $needle){
+			quickSort($array, $low, $p - 1, $k);
+		} else {
+			quickSort($array, $p + 1, $high, $k);
+		}
+		
+	}
+}
+
+function partition(&$array, $low, $high){
+	$pivot = $array[$high];
+	$i = $low;
+	for ($j = $low; $j < $high; $j++) {
+		if ($array[$j] <= $pivot) {
+			swap($array, $i, $j);
+			$i++;
+		}
+	}
+	
+	swap($array, $i, $high);
+	
+	return $i;
+}
+
+function swap(&$array, $index1, $index2) {
+	$swapy = $array [$index1];
+	$array [$index1] = $array [$index2];
+	$array [$index2] = $swapy;
+}

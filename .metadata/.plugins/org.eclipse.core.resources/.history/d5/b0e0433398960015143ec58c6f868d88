@@ -1,0 +1,92 @@
+<?php
+/**
+ * Save humans, destroy zombies!
+ **/
+
+define("GameWidth", 16000);
+define("GameHeigth", 9000);
+
+/* The order in which actions happens in between two rounds is:
+
+Zombies move towards their targets.
+Ash moves towards his target.
+Any zombie within a 2000 unit range around Ash is destroyed.
+Zombies eat any human they share coordinates with. */
+
+
+// game loop
+while (TRUE)
+{
+    $allHumans = [];
+    $allZombies = [];
+    
+    fscanf(STDIN, "%d %d",
+        $currentHeroX,
+        $currentHeroY
+    );
+    fscanf(STDIN, "%d",
+        $humanCount
+    );
+    for ($i = 0; $i < $humanCount; $i++)
+    {
+        fscanf(STDIN, "%d %d %d",
+            $humanId,
+            $humanX,
+            $humanY
+        );
+        
+        $allHumans[$i] = [
+            "humanID" => $humanId,
+            "humanX" => $humanX,
+            "humanY" => $humanY
+            ];
+    }
+    fscanf(STDIN, "%d",
+        $zombieCount
+    );
+    
+    $closestZombieToHero;
+    $smallestDistanceBetweenZombieAndHero = 50000;
+    
+    for ($i = 0; $i < $zombieCount; $i++)
+    {
+    	fscanf(STDIN, "%d %d %d %d %d",
+            $zombieId,
+            $zombieX,
+            $zombieY,
+            $zombieXNext,
+            $zombieYNext
+    		//TODO find closest zombie to hero
+    		//TODO find zombie that treatens human most
+        );
+        
+    	$allZombies[$i] = [
+            'zombieId' => $zombieId,
+            'zombieX' => $zombieX,
+            'zombieY' => $zombieY,
+            'zombieXNext' => $zombieXNext,
+            'zombieYNext' => $zombieYNext
+            ];
+    	
+    	$distanceBetweenZombieIAndHero = calculateDistance($currentHeroX, $zombieX, $currentHeroY, $zombieY);
+    	if ($distanceBetweenZombieIAndHero < $smallestDistanceBetweenZombieAndHero) {
+    		$smallestDistanceBetweenZombieAndHero = $distanceBetweenZombieIAndHero;
+    		$closestZombieToHero = $allZombies[$i];
+    	}
+    	
+    }
+    
+    //destination
+    //TODO - can save most treatened human - go there
+    //TODO - can kill closest zombie and save most treatened human - go to closest zombie, else to most treatened human
+    //TODO - next tactic, permute all variants to save humans and see what is best?
+    
+    $moveToXCoord = $closestZombieToHero['zombieX'];
+    $moveToYCoord = $closestZombieToHero['zombieY'];
+    echo("$moveToXCoord $moveToYCoord\n"); // Your destination coordinates
+}
+
+function calculateDistance($x1, $x2, $y1, $y2){
+	return sqrt(pow(($x2 - $x1), 2) + pow(($y2 - $y1), 2));
+}
+?>

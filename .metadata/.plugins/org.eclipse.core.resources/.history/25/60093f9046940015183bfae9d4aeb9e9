@@ -1,0 +1,44 @@
+<?php
+/* Задача 9:
+Да се състави програма, чрез която по въведен низ съдържащ букви,
+цифри, знак минус '-' се извежда сборът на въведените числа като се
+отчита знакът '-' пред съответното число.
+Вход: asd-12sdf45-56asdf100
+Изход:
+-12
+45
+-56
+100
+Сума = 77 */
+require_once 'Readline.php';
+
+$word = readline ( "Enter word: " . PHP_EOL );
+
+$allNumbers = [];
+
+$index = -1;
+
+//reference to Knuth–Morris–Pratt algorithm
+for ($i = 0; $i < strlen($word); $i++) {
+	if (isDigit($word[$i]) || ord($word[$i]) == 45) {
+		$allNumbers[++$index] = $word[$i];
+		for ($j = $i + 1; $j < strlen($word); $j++) {
+			if (isDigit($word[$j])) {
+				$allNumbers[$index] .= $word[$j];
+			} else {
+				break;
+			}
+		}
+		$i = $j - 1;
+	}
+}
+
+print_r($allNumbers);
+echo array_sum($allNumbers);
+
+function isDigit($character){
+	$asciiOfCharacter = ord($character);
+	if ($asciiOfCharacter >= 48 && $asciiOfCharacter <= 57) {
+		return true;
+	} else return false;
+}

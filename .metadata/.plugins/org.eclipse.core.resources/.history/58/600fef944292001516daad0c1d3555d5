@@ -1,0 +1,33 @@
+<?php
+/* Задача 4:
+Да се състави програма, чрез която по въведени начална и крайна
+цифра се извеждат на всеки нов ред следната последователност
+(триъгълник от знаци):
+Пример: 1, 9
+Изход:
+1
+1 2
+1 2 3
+... до
+1 2 3 4 5 6 7 8 9 */
+triangle(-4, 15);
+
+function triangle($start, $end, $counter = 0){
+	if($counter < abs($start)){
+		$counter = $start;
+	}
+	if ($counter > $end) {
+		return;
+	}
+	drawSymbol($start, $counter);
+	echo PHP_EOL;
+	triangle($start, $end, $counter + 1);
+}
+
+function drawSymbol($startNumber, $endNumber){
+	if ($startNumber > $endNumber) {
+		return;
+	}
+	echo $startNumber;
+	drawSymbol($startNumber + 1, $endNumber);
+}
